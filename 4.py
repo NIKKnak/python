@@ -34,41 +34,10 @@
 # 4, 5 -> 20
 # 4,6 -> 12
 
-
-
-# a,b = int(map(input().split()))
-
-# a = int(input())
-# b = int(input())
-
-# if a < b:
-#     i = a
-#     while i <= b:
-#         if i % a == 0 and i % b == 0:
-#             print(i)
-#         elif i % a != 0 and i % b != 0:
-#             print(a * b)
-#         i += 1
-
-# elif b < a:
-#     j = b
-#     while j <= a:
-#         if j % b == 0 and j % a == 0:
-#             print(j)
-#         elif j % b != 0 and j % a != 0:
-#             print(a * b)
-#         j += 1
-
-# elif a == b:
-#     print(a)
-
-
 def gcd(a,b):
     if b == 0:
         return a
     return gcd(b, a%b)
-
-
-    
+# math.gcd
 a, b = map(int, input().split())
 print(a*b//gcd(a,b))
