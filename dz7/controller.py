@@ -1,10 +1,9 @@
 from import_data import import_data
+from import_data import import_txt_data
 from export_data import export_data
 from print_data import print_data
 from search_data import search_data
 
-def greeting():
-    print("Добро пожаловать в телефонный справочник!")
 
 def input_data():
     last_name = input("Введите фамилию: ")
