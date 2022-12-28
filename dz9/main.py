@@ -1,5 +1,5 @@
 
-
+import requests
 import telebot
 from random import randint
 from random import choice
@@ -8,6 +8,18 @@ bot = telebot.TeleBot("5844080573:AAHSieG0eid-fLZ8bylvMgUF0qJXFHaW-gE")
 candys = dict()
 enable_game = dict()
 turn = dict()
+
+# 
+@bot.message_handler(commands=['usd'])
+def send_welcome(message):
+    res = requests.get('https://www.cbr-xml-daily.ru/daily_json.js').json()
+    for i in res.values():
+    #     print(i)
+        print(res['Valute']["USD"]['Name'], res['Valute']["USD"]['Value'])
+    bot.reply_to(message, res['Valute']["USD"]['Name'])
+
+
+
 
 @bot.message_handler(commands=['help'])
 def send_welcome(message):
