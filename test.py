@@ -273,13 +273,32 @@ os.system('cls' if os.name == 'nt' else 'clear')
 
 ########################################
 
-s = input()
+# первое и последнее вхождение
+# s = input()
 
-a = s.find('f')
-b = s.rfind('f')
-if a == b and a > -1:
-    print(a)
-elif a !=b:
-     print(f'{a} {b}')
-else:
-    print('NO')
+# a = s.find('f')
+# b = s.rfind('f')
+# if a == b and a > -1:
+#     print(a)
+# elif a !=b:
+#      print(f'{a} {b}')
+# else:
+#     print('NO')
+
+########################################
+
+# удаляем все, что между h первой и последней
+# s = input()
+
+# a = s.find('h')
+# b = s.rfind('h')
+
+# c = s[a:b+1]
+
+# print(s.replace(c, ''))
+
+
+a,b = int(input()), int(input())
+
+for i in range(a,b+1):
+    print(chr(i), end=' ')
